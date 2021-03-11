@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Bayonne's Community Dashboard
+{% endblock %}
+
+{% block main %}
+    <h2>
+        Bayonne's Community Dashboard
+    </h2>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+    <h2>
+        Community Dashboard
+    </h2>
+    <table class="table">
+        <tr>
+            <th>Task</th>
+            <th>Task ID</th>
+            <th>Requester</th>
+            <th>Month</th>
+            <th>Day</th>
+            <th>Year</th>
+        </tr>
+        {% for cominfo in haaa %}
+            <tr>
+                <td>{{ cominfo['task'] }}</td>
+                <td>{{ cominfo['task_id'] }}</td>
+                <td>{{ cominfo['username'] }}</td>
+                <td>{{ cominfo['month'] }}</td>
+                <td>{{ cominfo['day'] }}</td>
+                <td>{{ cominfo['year'] }}</td>
+            <tr>
+        {% endfor %}
+    </table>
+{% endblock %}

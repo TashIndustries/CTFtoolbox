@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block main %}
+    <h2>
+        Your Volunteer Quests & Help Requests
+    </h2>
+    <table class="table">
+        <tr>
+            <th>Task</th>
+            <th>Volunteer</th>
+            <th>Requester</th>
+            <th>Month</th>
+            <th>Day</th>
+            <th>Year</th>
+        </tr>
+        {% for userinfo in ahhh %}
+            <tr>
+                <td>{{ userinfo['task'] }}</td>
+                <td>{{ userinfo['Volunteer'] }}</td>
+                <td>{{ userinfo['Requester'] }}</td>
+                <td>{{ userinfo['month'] }}</td>
+                <td>{{ userinfo['day'] }}</td>
+                <td>{{ userinfo['year'] }}</td>
+            <tr>
+        {% endfor %}
+    </table>
+    <p>
+
+    </p>
+    <h2>
+        Community Dashboard
+    </h2>
+    <table class="table">
+        <tr>
+            <th>Task</th>
+            <th>Task ID</th>
+            <th>Requester</th>
+            <th>Month</th>
+            <th>Day</th>
+            <th>Year</th>
+        </tr>
+        {% for cominfo in haaa %}
+            <tr>
+                <td>{{ cominfo['task'] }}</td>
+                <td>{{ cominfo['task_id'] }}</td>
+                <td>{{ cominfo['username'] }}</td>
+                <td>{{ cominfo['month'] }}</td>
+                <td>{{ cominfo['day'] }}</td>
+                <td>{{ cominfo['year'] }}</td>
+            <tr>
+        {% endfor %}
+    </table>
+{% endblock %}

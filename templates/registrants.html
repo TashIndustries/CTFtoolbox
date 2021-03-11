@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>Registrants</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Hashed Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for username in registrants %}
+                <tr>
+                    <td>{{ username }}</td>
+                    <td>{{ registrants[username] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

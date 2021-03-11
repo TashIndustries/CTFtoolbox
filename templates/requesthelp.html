@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Request Help
+{% endblock %}
+
+{% block main %}
+    <form action="/requesthelp" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="task" placeholder="task" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="month" placeholder="month" type="text">
+            <input autocomplete="off" autofocus class="form-control" name="day" placeholder="day" type="text">
+            <input autocomplete="off" autofocus class="form-control" name="year" placeholder="year" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}

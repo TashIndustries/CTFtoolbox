@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form action="/" method="post">
+        <div class="form-group">
+            <input autofocus class="form-control" name="p" placeholder="P Value" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="q" placeholder="Q Value" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="e" placeholder="E Value" type="text">
+        </div>
+		<div class="form-group">
+            <input class="form-control" name="ciphertext" placeholder="Ciphertext" type="text">
+        </div>
+		<div class="form-group">
+            <input class="form-control" name="plaintext" placeholder="Plaintext" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Calculate</button>
+		<div class="form-group">
+            Your answer is: {{ plaintext }}
+        </div>
+    </form>
+{% endblock %}
